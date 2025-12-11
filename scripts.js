@@ -1,20 +1,21 @@
 const redSlider = document.getElementById('red-slider');
+const colorPreview = document.getElementById('color-preview');
+const redValue = document.getElementById('red-value');
 redSlider.addEventListener('input', function(event){
-    const redValue = document.getElementById('red-value');
-
     redValue.textContent = event.target.value;
+    colorPreview.style.backgroundColor = `rgb(${redValue.textContent}, ${greenValue.textContent}, ${blueValue.textContent})`;
 });
 
 const greenSlider = document.getElementById('green-slider');
+const greenValue = document.getElementById('green-value');
 greenSlider.addEventListener('input', function(event){
-    const greenValue = document.getElementById('green-value');
-
     greenValue.textContent = event.target.value;
+    colorPreview.style.backgroundColor = `rgb(${redValue.textContent}, ${greenValue.textContent}, ${blueValue.textContent})`;
 });
 
 const blueSlider = document.getElementById('blue-slider');
+const blueValue = document.getElementById('blue-value');
 blueSlider.addEventListener('input', function(event){
-    const blueValue = document.getElementById('blue-value');
-
     blueValue.textContent = event.target.value;
+    colorPreview.style.backgroundColor = `rgb(${redValue.textContent}, ${greenValue.textContent}, ${blueValue.textContent})`;
 });

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Цветовой микшер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="color-mixer">
+        <h1>Цветовой микшер</h1>
+        
+        <div class="color-preview" id="color-preview"></div>
+        
+        <div class="slider-container">
+            <label>Красный (R):</label>
+            <input type="range" id="red-slider" min="0" max="255" value="128">
+            <span class="value-display" id="red-value">128</span>
+        </div>
+        
+        <div class="slider-container">
+            <label>Зеленый (G):</label>
+            <input type="range" id="green-slider" min="0" max="255" value="128">
+            <span class="value-display" id="green-value">128</span>
+        </div>
+        
+        <div class="slider-container">
+            <label>Синий (B):</label>
+            <input type="range" id="blue-slider" min="0" max="255" value="128">
+            <span class="value-display" id="blue-value">128</span>
+        </div>
+        
+        <div class="rgb-display">
+            Текущий цвет: 
+            <div class="color-code" id="color-code">RGB(128, 128, 128)</div>
+        </div>
+        
+        <div class="preset-colors">
+            <div class="preset-color" style="background: #ff0000;" data-rgb="255,0,0"></div>
+            <div class="preset-color" style="background: #00ff00;" data-rgb="0,255,0"></div>
+            <div class="preset-color" style="background: #0000ff;" data-rgb="0,0,255"></div>
+            <div class="preset-color" style="background: #ffff00;" data-rgb="255,255,0"></div>
+            <div class="preset-color" style="background: #ff00ff;" data-rgb="255,0,255"></div>
+            <div class="preset-color" style="background: #00ffff;" data-rgb="0,255,255"></div>
+        </div>
+        
+        <button id="random-btn" style="margin-top: 20px; padding: 10px 20px;">
+            Случайный цвет
+        </button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
